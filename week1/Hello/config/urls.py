@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """config URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -18,4 +19,11 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+=======
+from django.urls import path
+from pages.views import homePageView
+
+urlpatterns = [
+    path('', homePageView)
+>>>>>>> b35dfa2ccb67e1a80cbb33c2126cbce55c90934e
 ]
