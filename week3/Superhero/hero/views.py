@@ -1,28 +1,38 @@
 from django.views.generic import TemplateView
 
+
+class IndexView(TemplateView):
+    template_name = 'index.html'
+
+
 class HulkView(TemplateView):
-    template_name = 'hulk.html'
+    template_name = 'hero.html'
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'My About Page', 
-            'body': 'Once upon a time ...',
+            'title': 'Hulk',
+            'body': 'My name is Bruce Banner',
+            'image': '/static/images/hulk.jpg'
         }
+
 
 class IronManView(TemplateView):
-    template_name = "iron_man.html"
+    template_name = "hero.html"
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'My Home Page', 
-            'body': 'This page is boring ...',
+            'title': 'Iron Man',
+            'body': 'My name is Tony Stark, but I am Iron Man',
+            'image': '/static/images/ironman.jpg'
         }
 
-class BlackWidowView(TemplateView):
-    template_name = "black_widow.html"
+
+class BlackWidow(TemplateView):
+    template_name = 'hero.html'
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'This is the Index Page!', 
-            'body': 'I am Index!',
+            'title': 'Black Widow',
+            'body': 'My name is Natasha Romanova',
+            'image': '/static/images/blackwidow.jpg'
         }
