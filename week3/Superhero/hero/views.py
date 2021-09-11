@@ -6,7 +6,7 @@ class IndexView(TemplateView):
 
 
 class HulkView(TemplateView):
-    template_name = 'hulk.html'
+    template_name = 'hero.html'
 
     def get_context_data(self, **kwargs):
         return {
@@ -17,7 +17,7 @@ class HulkView(TemplateView):
 
 
 class IronManView(TemplateView):
-    template_name = "iron_man.html"
+    template_name = "hero.html"
 
     def get_context_data(self, **kwargs):
         return {
@@ -28,7 +28,7 @@ class IronManView(TemplateView):
 
 
 class BlackWidow(TemplateView):
-    template_name = 'black_widow.html'
+    template_name = 'hero.html'
 
     def get_context_data(self, **kwargs):
         return {
