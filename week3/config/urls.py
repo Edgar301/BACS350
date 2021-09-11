@@ -1,8 +1,9 @@
 from django.urls import path
-from django.views.generic import TemplateView
+from hero.views import BlackWidow, HulkView, IndexView, IronManView
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name="index.html")),
-    path('about', TemplateView.as_view(template_name="about.html")),
-    path('home', TemplateView.as_view(template_name="home.html")),
+    path('', IndexView.as_view()),
+    path('hulk', HulkView.as_view()),
+    path('ironman', IronManView.as_view()),
+    path('blackwidow', BlackWidow.as_view()),
 ]
