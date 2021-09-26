@@ -2,10 +2,17 @@
 
 {% block content %}
 
-<h1>Hero Details</h1>
+<h2>Hero Details</h2>
 <ul>
     <li>Name: {{ object.name }}</li>
     <li>Description: {{ object.description }}</li>
+    <p>
+        <img src="{{ hero.image }}" alt="{{ hero.name }}" width="300">
+    </p>
+
+    <p>
+        <a href="{{ hero.pk }}">{{ hero.name }}</a>
+    </p>
 </ul>
 
 {% endblock content %}
