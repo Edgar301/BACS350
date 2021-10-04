@@ -27,13 +27,13 @@ class HeroDetailView(DetailView):
 class HeroCreateView(CreateView):
     template_name = "Hero_add.html"
     model = Hero
-    fields = ['name', 'description']
+    fields = ['name', 'description', 'identity', 'strength ', 'weakness']
 
 
 class HeroUpdateView(UpdateView):
     template_name = "hero_edit.html"
     model = Hero
-    fields = ['name', 'description']
+    fields = ['name', 'description', 'identity', 'strength ', 'weakness']
 
 
 class HeroDeleteView(DeleteView):
