@@ -25,7 +25,7 @@ class HeroDetailView(DetailView):
 
 
 class HeroCreateView(CreateView):
-    template_name = "Hero_add.html"
+    template_name = "hero_add.html"
     model = Hero
     fields = ['name', 'description']
 
