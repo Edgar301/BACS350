@@ -1,0 +1,44 @@
+{% extends 'superhero_theme.html' %}
+
+{% block content %}
+
+<h1>List of My Hero</h1>
+
+<div class="container bg-light text-dark p-3">
+    <table class="table table-hover">
+        <tr>
+            <th>Hero</th>
+            <th>Name</th>
+            <th>Identity</th>
+            <th>Strength</th>
+            <th>Weakness</th>
+            <th>Edit</th>
+        </tr>
+        {% for hero in object_list %}
+        <tr>
+            <td>
+                <p>
+                    <img src="{{ hero.image }}" alt="{{ hero.name }}" width="200">
+                </p>
+                <a href="{{ hero.pk }}">{{ hero.name }}</a>
+            </td>
+            <td>{{ hero.description }}</td>
+            <td>{{ hero.identity }}</td>
+            <td>{{ hero.strength }}</td>
+            <td>{{ hero.weakness }}</td>
+
+
+            <td><a href="{{ hero.pk }}/">Edit</a></td>
+            <td><a href="{{ hero.pk }}/delete">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+<p>
+    <a href="/admin/" class="btn btn-success m-5">Modify Database with Admin Views</a>
+    <a href="/hero/add" class="btn btn-success m-5">Add New Book</a>
+</p>
+
+{% endblock content %}
