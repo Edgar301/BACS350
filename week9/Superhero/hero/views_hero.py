@@ -22,7 +22,7 @@ class BookDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         book = Hero.objects.get(pk=self.kwargs['pk'])
-        return dict(object=book, chapters=Chapter.objects.filter(hero=book.title))
+        return dict(object=book, chapters=Chapter.objects.filter(hero=book.name))
 
 
 class BookCreateView(LoginRequiredMixin, CreateView):

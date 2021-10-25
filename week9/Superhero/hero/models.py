@@ -27,7 +27,7 @@ class Hero(models.Model):
 
 
 class Chapter(models.Model):
-    book = models.CharField(max_length=200, default="Leverage Principle")
+    hero = models.CharField(max_length=200, default="Leverage Principle")
     # book = models.ForeignKey(Book, on_delete=models.CASCADE)
     order = models.IntegerField()
     title = models.CharField(max_length=200)
@@ -36,7 +36,7 @@ class Chapter(models.Model):
     document = models.CharField(max_length=200)
 
     def export_record(self):
-        return [self.book, self.order, self.title]
+        return [self.hero, self.order, self.title]
 
     @staticmethod
     def import_record(values):
@@ -45,4 +45,4 @@ class Chapter(models.Model):
         c.save()
 
     def __str__(self):
-        return f'{self.book.title} - {self.order} - {self.title}'
+        return f'{self.hero.title} - {self.order} - {self.title}'
