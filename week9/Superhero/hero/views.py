@@ -33,7 +33,7 @@ class HeroCreateView(CreateView):
 class HeroUpdateView(UpdateView):
     template_name = "hero_edit.html"
     model = Hero
-    fields = ['name', 'description']
+    fields = ['name', 'name']
 
     # , 'identity', 'strength ', 'weakness'
 
