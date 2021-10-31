@@ -8,7 +8,7 @@ def export_chapters(hero):
     model = Chapter
     chapters = f'{hero.doc_path}/chapters.csv'
     records = [o.export_record()
-               for o in model.objects.filter(hero=hero.name)]
+               for o in model.objects.filter(hero=hero.title)]
     write_csv_file(chapters, records)
 
 

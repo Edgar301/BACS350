@@ -40,7 +40,7 @@ class Chapter(models.Model):
 
     @staticmethod
     def import_record(values):
-        c = Chapter.objects.get_or_create(book=values[0], order=values[1])[0]
+        c = Chapter.objects.get_or_create(hero=values[0], order=values[1])[0]
         c.title = values[2]
         c.save()
 
